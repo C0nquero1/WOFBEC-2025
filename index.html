@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOFBEC 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>WOFBEC 2025</h1>
+        <p>Welcome to the World Faith Believers Convention 2025</p>
+    </header>
+
+    <!-- Event Schedule Section -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <p class="section-guide">
+            View the detailed schedule of the event, including session times and speakers. Use the "Add to Calendar" button to save sessions to your personal calendar.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Session</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Session One</td>
+                    <td>2025-01-08</td>
+                    <td>5:30 PM</td>
+        
+                    <td><button class="add-to-calendar-btn">Add to Calendar</button></td>
+                </tr>
+                <tr>
+                    <td>Session Two</td>
+                    <td>2025-01-09</td>
+                    <td>5:30 PM</td>
+
+                    <td><button class="add-to-calendar-btn">Add to Calendar</button></td>
+                </tr>
+                <tr>
+                    <td>Session Three</td>
+                    <td>2025-01-10</td>
+                    <td>5:30 PM</td>
+                    
+                    <td><button class="add-to-calendar-btn">Add to Calendar</button></td>
+                </tr>
+                <tr>
+                    <td>Session Four</td>
+                    <td>2025-01-11</td>
+                    <td>9:00 AM</td>
+        
+                    <td><button class="add-to-calendar-btn">Add to Calendar</button></td>
+                </tr>
+                <tr>
+                    <td>Session Five</td>
+                    <td>2025-01-11</td>
+                    <td>5:30 PM</td>
+                    
+                    <td><button class="add-to-calendar-btn">Add to Calendar</button></td>
+                </tr>
+                <tr>
+                    <td>Session Six</td>
+                    <td>2025-01-12</td>
+                    <td>9:00 AM</td>
+            
+                    <td><button class="add-to-calendar-btn">Add to Calendar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Attendance Tracker Section -->
+    <section id="tracker">
+        <h2>Attendance Tracker</h2>
+        <p class="section-guide">
+            Check in for sessions you attend to log your participation. If you're remote, use the "Watch Online" link to join the session live.
+        </p>
+        <div id="session-cards"></div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <h2>Session Feedback</h2>
+        <p class="section-guide">
+            Share your thoughts about the sessions. Fill out the form below with your feedback.
+        </p>
+        <form id="feedback-form" action="https://formspree.io/f/xjkkkroy" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="session">Session Name:</label>
+            <input type="text" id="session" name="session" required>
+
+            <label for="rating">How impactful was the session?</label>
+            <select id="rating" name="rating" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Highly Impactful">Highly Impactful</option>
+                <option value="Impactful">Impactful</option>
+                <option value="Somewhat Impactful">Somewhat Impactful</option>
+            </select>
+
+            <label for="impact-feedback">Why do you feel this way about the session?</label>
+            <textarea id="impact-feedback" name="impact-feedback" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <!-- Pop-up Form -->
+    <div id="popup-form" class="hidden">
+        <div class="popup-content">
+            <h2>Check-In</h2>
+            <form id="check-in-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <input type="hidden" id="session" name="session">
+
+                <button type="submit">Submit</button>
+                <button type="button" id="close-popup">Cancel</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 WOFBEC. Follow us on 
+            <a href="https://twitter.com" target="_blank">Twitter</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+  </html>
